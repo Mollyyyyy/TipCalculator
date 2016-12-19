@@ -3,7 +3,7 @@
 //  calculator
 //
 //  Created by Apple on 2016/12/19.
-//  Copyright © 2016年 Xinmeng Li. All rights reserved.
+//  Copyright © 2016 Xinmeng Li. All rights reserved.
 //
 
 import UIKit
@@ -11,6 +11,7 @@ import UIKit
 class SettingsViewController: UIViewController {
     @IBOutlet weak var DefaultTipControl: UISegmentedControl!
     let tipPercentages = [0.15,0.20,0.22]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
      let defaults = UserDefaults.standard

@@ -48,7 +48,7 @@
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                         <connections>
-                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="ghr-QE-vJt"/>
+                                            <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="TCy-ux-Lzz"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="people number:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lpm-eV-n5T">
@@ -121,7 +121,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="34D-AQ-ojL" appends="YES" id="PXs-5T-XY9"/>
+                            <outletCollection property="gestureRecognizers" destination="ufE-Fe-xSe" appends="YES" id="crD-4v-Fdi"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="fY6-51-ziy">
@@ -143,9 +143,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="34D-AQ-ojL">
+                <tapGestureRecognizer id="ufE-Fe-xSe">
                     <connections>
-                        <action selector="onTap:" destination="BYZ-38-t0r" id="ewf-bn-Kx7"/>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="TBo-D6-j9j"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -196,11 +196,18 @@
         <!--Navigation Controller-->
         <scene sceneID="Rwp-2h-Ld9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fF5-6F-Rsj" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="fF5-6F-Rsj" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OWB-FA-vQU">
+                    <navigationBar key="navigationBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="OWB-FA-vQU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.70125214039999995" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.1047196062" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.89913313360000002" colorSpace="calibratedRGB"/>
+                            <color key="textShadowColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.89913313360000002" colorSpace="calibratedRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -217,4 +224,5 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.89913313360000002" colorSpace="calibratedRGB"/>
 </document>

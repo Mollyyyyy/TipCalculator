@@ -3,13 +3,13 @@
 //  calculator
 //
 //  Created by Apple on 2016/12/16.
-//  Copyright © 2016年 Xinmeng Li. All rights reserved.
+//  Copyright © 2016 Xinmeng Li. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-
+   
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var peopleField: UITextField!
     @IBOutlet weak var totalLabel: UILabel!
@@ -25,11 +25,13 @@ class ViewController: UIViewController {
         let DefaultTip = defaults.integer(forKey: "defaultTip")
         tipControl.selectedSegmentIndex = DefaultTip
         }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+   
     @IBAction func onTap(_ sender: Any) {
         let defaults = UserDefaults.standard
         let DefaultTip = defaults.integer(forKey: "defaultTip")
@@ -37,7 +39,7 @@ class ViewController: UIViewController {
         calculateTip(tipControl)
         view.endEditing(true)
     }
-  
+
     @IBAction func calculateTip(_ sender: Any) {
         let tipPercentages = [0.15,0.20,0.22]
         let bill = Double(billField.text!) ?? 0

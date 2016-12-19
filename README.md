@@ -5,15 +5,15 @@
 
 Submitted by: **Xinmeng Li*
 
-Time spent: **5** hours spent in total
+Time spent: **9** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is complete:
 
-* [T] User can enter a bill amount, choose a tip percentage, and see the tip and
-total values.
-* [ ] Settings page to change the default tip percentage.
+* [Yes] User can enter a bill amount, choose a tip percentage, 
+and see the tip and total values.
+* [Yes] Settings page to change the default tip percentage.
 
 The following **optional** features are implemented:
    * [ ] UI animations
@@ -32,18 +32,18 @@ The following **optional** features are implemented:
 
    Here's a walkthrough of implemented user stories:
 
-   <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video
-   Walkthrough' width='' alt='Video Walkthrough' />
-
+   <img src='http://i.imgur.com/29QJB8E.gif' title='TipCalculator'
+   width='' alt='Video Walkthrough' />
    GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-   Describe any challenges encountered while building the app.
+   How to synchronize the default tip percentage for calculating 
+   after I updated it in the setting page.
 
 ## License
 
-   Copyright [yyyy] [name of copyright owner]
+   Copyright [Xinmeng Li]
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
