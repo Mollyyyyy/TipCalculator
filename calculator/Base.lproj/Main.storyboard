@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="65" width="375" height="115"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="20" clearButtonMode="always" id="aMH-9x-ud5">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="20" clearButtonMode="always" id="aMH-9x-ud5">
                                         <rect key="frame" x="35" y="0.0" width="282" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.79968428940000003" colorSpace="calibratedRGB"/>
@@ -124,7 +124,14 @@
                             <outletCollection property="gestureRecognizers" destination="34D-AQ-ojL" appends="YES" id="PXs-5T-XY9"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="fY6-51-ziy"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="fY6-51-ziy">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="1tG-lW-Q92" userLabel="Settings">
+                            <color key="tintColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.89913313360000002" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="Qzb-zd-6aA" kind="push" id="Sdh-Zo-O3O"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="aMH-9x-ud5" id="LOw-Mn-tmh"/>
                         <outlet property="peopleField" destination="qIF-6H-GCY" id="zAd-cY-bFY"/>
@@ -138,11 +145,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="34D-AQ-ojL">
                     <connections>
-                        <action selector="onTap:" destination="BYZ-38-t0r" id="QOY-Fd-6tt"/>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="ewf-bn-Kx7"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="525.5" y="137.5"/>
+        </scene>
+        <!--SettingsViewController-->
+        <scene sceneID="AB9-rz-mJL">
+            <objects>
+                <viewController id="Qzb-zd-6aA" userLabel="SettingsViewController" customClass="SettingsViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DC2-W1-nk3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Default Tip Percentage:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pHR-eA-hlW">
+                                <rect key="frame" x="40" y="99" width="217" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.89913313360000002" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" id="S36-qo-Zbf">
+                                <rect key="frame" x="16" y="135" width="304" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="20%"/>
+                                    <segment title="22%"/>
+                                </segments>
+                                <color key="tintColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.79968428940000003" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="SetDefault:" destination="Qzb-zd-6aA" eventType="valueChanged" id="2AX-ls-F9d"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.70125214039999995" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.40000000000000002" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.89913313360000002" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7uc-dO-KXm"/>
+                    <connections>
+                        <outlet property="DefaultTipControl" destination="S36-qo-Zbf" id="9BK-cU-T3Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fKy-nx-3E5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="938.5" y="137.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rwp-2h-Ld9">

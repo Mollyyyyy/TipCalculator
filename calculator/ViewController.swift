@@ -21,14 +21,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
+        let defaults = UserDefaults.standard
+        let DefaultTip = defaults.integer(forKey: "defaultTip")
+        tipControl.selectedSegmentIndex = DefaultTip
+        }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     @IBAction func onTap(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        let DefaultTip = defaults.integer(forKey: "defaultTip")
+        tipControl.selectedSegmentIndex = DefaultTip
+        calculateTip(tipControl)
         view.endEditing(true)
     }
   
